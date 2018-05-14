@@ -1,0 +1,25 @@
+<h1>Pages#answer</h1>
+<p>Find me in app/views/pages/answer.html.erb</p>
+
+<p>Your input: <%= @answer %>
+  "- You"
+</p>
+<br>
+<p>Coach answer:</p>
+<% if @answer == "I am going to work" %>
+  <%= "Great!
+  - Your Coach" %>
+  <% elsif @answer[-1] == "?" %>
+    <%= "Silly question, get dressed and go to work!
+    - Your Coach" %>
+  <% else %>
+    <%= "I don't care, get dressed and go to work!
+    - Your Coach" %>
+<% end %>
+
+<br>
+<br>
+<%= link_to "Ask a new question", "http://localhost:3000/ask" %>
+
+
+
